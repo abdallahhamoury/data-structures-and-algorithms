@@ -74,10 +74,8 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) =>{
-  arr.map((num) => {
-    let num1 =  Math.pow(2,num);
-    return num1;
-  })
+  let newArr = arr.map(num=>2**num);
+  return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
