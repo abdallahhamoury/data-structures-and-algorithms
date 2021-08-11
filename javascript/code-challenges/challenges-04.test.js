@@ -95,11 +95,9 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 
 const alphabetize = (arr) => {
 
-return arr.sort((x,y)=>{
+return arr.sort()
 
-return x - y;
-}
-)
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -108,6 +106,8 @@ CHALLENGE 6
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
+
+  
   return arr.sort((x,y)=>{
 
 
