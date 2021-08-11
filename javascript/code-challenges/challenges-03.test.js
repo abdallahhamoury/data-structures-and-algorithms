@@ -23,36 +23,50 @@ const addTwo = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named typeNum that, given an array as input, uses filter to return an array containing only the numbers.
-
-For example, typeNum([1, 'bob' ,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const typeNum = (arr) => {
-  // Solution code here...
+
+  let numberOf = arr.filter(number =>{
+
+
+    if (typeof (number)=="number"){
+
+
+      return number
+
+    }
+
+  })
+
+
+
+  return numberOf;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named containsAnd that, given an array of strings as input, uses filter to return an array containing only strings that contain 'and' within the string.
 
-For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
 const containsAnd = (arr) => {
 
-  let stringA ='add';
+  let newArr =arr.filter(item=>{
 
-  let newArr = arr.filter(item=>{
 
-    if (item.includes(stringA)){
 
-      return true;
-
+    if (item.search('and') != -1)
+    
+    
+    
+    {
+      return item
     }
-
-  });
+  }
+    )
+    return newArr
 
 };
 
@@ -66,14 +80,14 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
 
-  let oddValuesNum = arr.filter((x)=>{
+  let newArr = arr.filter(item=>{
+    if (item%2 !==0){
+      return true;
+    }
+  })
 
-    
-    {return true}
-  });
-
-
-  return oddValuesNum
+  return newArr;
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -85,7 +99,16 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+  
+
+let newArr = arr.filter (item=>{
+  if ((forbiddenValues.indexOf(item))== -1){
+    return true;
+  }
+}
+  )
+
+return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
