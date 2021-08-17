@@ -4,18 +4,18 @@
 CHALLENGE 1 - Review
 
 ------------------------------------------------------------------------------------------------ */
-const toLastNames = people => {
-
-  return people.map
-
-  (names =>
+const toLastNames = (people) => {
 
 
-    `${names.firstName}
-    
-    ${names.lastName}`);
-  
-  };
+return (people.map(ele=>{
+
+
+  return (`${ele.firstName} ${ele.lastName}`);
+}
+)
+)
+
+}
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,9 +60,9 @@ CHALLENGE 4
 const countNumberOfElements = (arr) => {
 
 
-  return arr.reduce( (rac, vareul,index)=>{
+  return arr.reduce((rac, vareul, index) => {
 
-  
+
     let newArr = 1
 
 
@@ -129,14 +129,14 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  
-let newArr=[];
 
-arr.reduce((rac, vareul)=>{
-  return newArr.push((vareul.name))
-},[])
+  let newArr = [];
 
-return newArr;
+  arr.reduce((rac, vareul) => {
+    return newArr.push((vareul.name))
+  }, [])
+
+  return newArr;
 
 
 };
@@ -147,8 +147,12 @@ CHALLENGE 6
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
- 
-  
+
+let newArr=str.split('');
+let revers = newArr.reduce((x,y)=>{
+  return y + x
+},'')
+return revers
 };
 
 /* ------------------------------------------------------------------------------------------------
