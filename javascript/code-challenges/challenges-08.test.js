@@ -4,9 +4,6 @@
 
 CHALLENGE 1 - Review
 
-Use the characters data below for all of the challenges except challenge 2 and 3.
-
-Write a function named sortByChildren that sorts the characters below by the number of children in each house (fewest to most). If a house has the same number of children, sort alphabetically by house name.
 
 ------------------------------------------------------------------------------------------------ */
 let characters = [
@@ -55,59 +52,70 @@ let characters = [
 ];
 
 const sortByChildren = (charArray) => {
+
+
   
-  charArray.sortByChildren((x,y)=> x.children.length - y.children.length);
+  charArray.sort((x,y)=> x.children.length - y.children.length);
+
+
   return charArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not. 
 
 ------------------------------------------------------------------------------------------------ */
 
 const containsW = (str) => {
-  // Solution code here...
+
+  let regex1 =/w/g;
+
+  return regex1.test(str);
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named isNum that takes in a string or number of any length. This function should use a regular expression pattern to return true if the input contains a number, and false if the input does not contain a number.
 
-For example:
-12345 returns true
-'12345' returns true
-'h3llo world' returns true
-'hello world' returns false
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  // Solution code here...
+
+ let regex2 = /\d/g;
+
+ return regex2.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named containsWorld that takes in a string or number of any length. This function should use a regular expression pattern to return true if the input contains the word 'world' all in lower-case letters, and false if the input does not.
+
 
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
-  // Solution code here...
+
+  let regex3 =/world/g;
+
+  return regex3.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named isCapitalized that takes in a string. This function should use a regular expression pattern to match all words that begin with a capital letter. It should only match words, not punctuation.
-
-Return an array containing all the matches.
+.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+
+
+  let regex4 = /[A-Z][a-z]*/gs;
+
+
+  return str.match(regex4)||[];
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -117,7 +125,10 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  
+
+  
+
 };
 
 /* ------------------------------------------------------------------------------------------------
